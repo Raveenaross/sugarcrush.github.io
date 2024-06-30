@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Sugar Crush</title>
+    <link rel="stylesheet" href="css/total.css">
+</head>
+
+<body>
+    <nav>
+        <a id="logo" href="home.html">SugarCrush</a>
+    </nav>
+    <h1>Total Payment</h1>
+    <div id="total">
+    </div>
+    <button class="empty-btn" id="empty-btn">Empty cart</button>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Retrieve cart items from localStorage
+            let cartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+            const emptyBtn = document.getElementById("empty-btn");
+
+            // Calculate total price
+            let total = 0;
+            cartItems.forEach(function (item) {
+                total += item.price;
+            });
+
+            // Display total
+            const totalDisplay = document.getElementById("total");
+            if (totalDisplay) {
+                totalDisplay.textContent = "Total: ₹" + total.toFixed(2);
+            }
+
+            emptyBtn.addEventListener("click", function () {
+                cartItems = [];
+                localStorage.setItem("cartItems", JSON.stringify(cartItems));
+
+                // Update total display
+                total = 0; // Reset total to 0
+                totalDisplay.textContent = "Total: ₹" + total.toFixed(2);
+            })
+        });
+    </script>
+</body>
+
+</html>

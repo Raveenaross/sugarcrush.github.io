@@ -1,0 +1,133 @@
+* {
+    margin: 0%;
+    box-sizing: border-box;
+    font-family: "Mukta", sans-serif;
+    font-style: normal;
+}
+body{
+    background-color: #FAF0D7;
+}
+nav {
+    background-color: #372948;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    position: sticky;
+    top:0;
+    z-index: 1000;
+    box-shadow: 0 2px 4px gray; 
+}
+#logo{
+    font-weight: 700;
+    font-size: 40px;
+    margin-left: 10px;
+}
+a {
+    color: #FFCACA;
+    text-decoration: none;
+}
+a{
+    font-size: 20px;
+}
+.left-nav-items {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    float: right;
+}
+.items{
+    margin-top: 10px;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.items:hover{
+    color:#FF7272;
+}
+h1{
+    padding-left: 20px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+#elements-box-hd1{
+    color:#FB5B5A;
+    background-color: #FFD9C0;
+}
+#elements-box-hd2{
+    color:#FF5F00;
+    background-color: #FFBB70;
+}
+#elements-box-hd3{
+    color: #2F2519;
+    background-color: #E5BA73;
+}
+.box1 , .box2 , .box3{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.elements-box{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+figure{
+    flex: 1;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+img{
+    border-radius: 10px;
+}
+.item-name , .item-price{
+    color: #0E2954;
+}
+.item-price {
+    font-weight: 600;
+}
+figcaption{
+    padding-left: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+button{
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100px;
+    background-color: #FFF455;
+    outline: none;
+    border: 2px solid #FFF455;
+    color:#C07F00;
+    border-radius: 5px;
+}
+button:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px #FFF455;
+    color:#372948;
+    font-weight: 700;
+}
+.end-btn{
+    cursor: pointer;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 600px;
+    margin-right: 600px;
+    padding: auto;
+    box-sizing: content-box;
+    text-align: center;
+    outline: none;
+    background-color: #86469C;
+    border: 3px solid #86469C;
+    color:#F0F3FF;
+    font-size: 20px;
+}
+.end-btn:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 15px #86469C;
+    color:#FEFF86;
+    font-weight: 400;
+}
